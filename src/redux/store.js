@@ -11,8 +11,11 @@ const initialState = {
         result: '',
         data: '',
         isValid: true,
-        request: {},
-        isValid: true,
+        request: {
+            error: null,
+            success: false, 
+            pending: false,
+        },
     },
     transactionHistory: [],
   }

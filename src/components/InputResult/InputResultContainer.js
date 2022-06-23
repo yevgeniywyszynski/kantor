@@ -1,5 +1,12 @@
 import { connect } from "react-redux";
-import { changeAmount, changeResult, changeValid, getAmount, getFrom, getResult, getTo,getValid} from "../../redux/selectMoneyRedux";
+import { changeAmount, 
+        changeResult,
+        changeValid,
+        getAmount,
+        getFrom,
+        getResult,
+        getTo,
+        getValid} from "../../redux/moneyActionsSelectors";
 import InputResult from '../InputResult/InputResult';
 
 const mapStateToProps = (state) => ({

@@ -12,11 +12,12 @@ const TransactionHistory = ({history}) => {
                 <p className={styles.titleData}>Po Konwersji</p>
             </div>
             {history.map(e => (
-                <div className={styles.historyWrapper} key={(Math.floor(Math.random() * 1000))}>
-                    <p className={styles.dataStyl}>{e.data}</p>
-                    <p className={styles.dataStyl}>{e.amount} {e.from}</p>
-                    <FaLongArrowAltRight className={styles.iconFinal}/>
-                    <p className={styles.dataStylBold}>{e.result} {e.to}</p>    
+                <div className={styles.historyWrapper} 
+                    key={(Math.floor(Math.random() * 1000))}>
+                        <p className={styles.dataStyl}>{e.data}</p>
+                        <p className={styles.dataStyl}>{e.amount} {e.from}</p>
+                        <FaLongArrowAltRight className={styles.iconFinal}/>
+                        <p className={styles.dataStylBold}>{e.result} {e.to}</p>    
                 </div>
             ))}
         </div>

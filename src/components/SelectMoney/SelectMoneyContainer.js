@@ -1,5 +1,8 @@
 import { connect } from "react-redux";
-import { changeFrom, changeAmount, changeTo, changeResult } from "../../redux/selectMoneyRedux";
+import { changeFrom,
+        changeAmount,
+        changeTo,
+        changeResult } from "../../redux/moneyActionsSelectors";
 import SelectMoney from '../SelectMoney/SelectMoney';
 
 const mapDispatchToProps = dispatch => ({

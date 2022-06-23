@@ -31,7 +31,7 @@ const SelectMoney = ({changeFrom, changeTo, changeResult}) => {
                 changeTo(e.target.value)
                 changeResult('')
                 }
-                )}
+            )}
             >
                 <option value="CHF">CHF</option>
                 <option value="GBP">GBR</option>

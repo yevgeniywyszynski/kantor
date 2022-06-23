@@ -3,36 +3,50 @@ import styles from './Steps.module.scss';
 import TransactionHistory from '../TransactionHistory/TransactionHistoryContainer';
 import SelectMoney from '../SelectMoney/SelectMoneyContainer';
 import InputResult from '../InputResult/InputResultContainer';
+import { ERROR_MESSAGE } from '../../settings/settings';
 
-const Steps = ({addTransaction, fromRedux, toRedux, amountRedux, loadMoneyRequest, resultRedux, dataRedux, changeValid }) => {
+const Steps = ({addTransaction, 
+                fromRedux, 
+                toRedux, 
+                amountRedux, 
+                loadMoneyRequest, 
+                resultRedux, 
+                dataRedux, 
+                changeValid, 
+                errorRequest }) => {
  
-const [showHistory, setShowHistory] = useState(false)
+    const [showHistory, setShowHistory] = useState(false)
 
-const currencyChange = () => {
+    const currencyChange = () => {
+        if(amountRedux == ''|| isNaN(amountRedux)){
+            changeValid(false)
+        } else {
+            changeValid(true)
+            const fetchData = async () => {
+                loadMoneyRequest(fromRedux, toRedux, amountRedux)
+            }
+            fetchData()     
+        }
+    }   
 
-    if(amountRedux== ''|| isNaN(amountRedux)){
-        changeValid(false)
-    } else {
-        changeValid(true)
-        const fetchData = async () => {
-            loadMoneyRequest(fromRedux, toRedux, amountRedux)
-        }
-        fetchData()     
-    }
-}
+    useEffect(()=>{
+        let infoObj = {
+                from: fromRedux,
+                to: toRedux,
+                amount: amountRedux,
+                data: dataRedux,
+                result: resultRedux
+            }
+            if(resultRedux){
+                addTransaction(infoObj);
+            }
+    }, [resultRedux])
 
-useEffect(()=>{
-    let infoObj = {
-            from: fromRedux,
-            to: toRedux,
-            amount: amountRedux,
-            data: dataRedux,
-            result: resultRedux
+    useEffect(() => {
+        if(errorRequest){
+            alert(ERROR_MESSAGE)
         }
-        if(resultRedux){
-            addTransaction(infoObj);
-        }
-}, [resultRedux])
+    }, [errorRequest])
 
     return(
         <div className={styles.convertorWrapper}>
@@ -43,8 +57,18 @@ useEffect(()=>{
                     <InputResult/>
                 </div>
                 <div className={styles.btnWrapper}>
-                    <button className={styles.btnHistory} onClick={() => setShowHistory(!showHistory)}>{showHistory? "Ukryj Historie" : "Pokaz historie"}</button>
-                    <button className={styles.btnConvert} onClick={() => currencyChange()}type="button" >Konwertuj</button>
+                    <button 
+                        className={styles.btnHistory} 
+                        onClick={() => 
+                            setShowHistory(!showHistory)}>
+                                {showHistory? "Ukryj Historie" : "Pokaz historie"}
+                    </button>
+                    <button 
+                        className={styles.btnConvert} 
+                        onClick={() => 
+                            currencyChange()}type="button" >
+                                Konwertuj
+                    </button>
                 </div>
                 {
                 showHistory ? <TransactionHistory /> : null
