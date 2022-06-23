@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { startRequest, loadMoney, endRequest, errorRequest } from "./moneyActionsSelectors";
-
+import { CURRENCY_API_KEY } from '../settings/keys';
 export const loadMoneyRequest = (from, to, amount) => {
     return async dispatch => {
        dispatch(startRequest());
@@ -16,7 +16,7 @@ export const loadMoneyRequest = (from, to, amount) => {
             let allMoney = await axios.get('https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert',
                 {
                 headers: {
-                    'X-RapidAPI-Key': '75879634b0msh030aea868ed7617p14451ajsnec37dfcfedaa',
+                    'X-RapidAPI-Key': CURRENCY_API_KEY,
                     'X-RapidAPI-Host': 'currency-conversion-and-exchange-rates.p.rapidapi.com'
                 },
                 params: infoObj,
