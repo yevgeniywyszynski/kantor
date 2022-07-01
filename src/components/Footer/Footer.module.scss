@@ -1,0 +1,13 @@
+.footerWrapper{
+    display: flex;
+    justify-content: center;
+    .footer{
+        text-decoration: none;
+        color: #000;
+    }
+    .linkAuthor{
+        text-decoration: none;
+        color: #335566;
+        font-weight: bold;
+    }
+}
