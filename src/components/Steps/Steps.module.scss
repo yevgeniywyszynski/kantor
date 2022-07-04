@@ -58,59 +58,90 @@
         font-size: 16px;
         background-color: #fff;
     }
+}
+.btnWrapper{
+    justify-content: end;
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    padding: 0 64px;
+    padding-bottom: 97px;
+
+
+    .btnConvert{
+        box-shadow: 3px 3px 7px #C2CBD9;
+        padding: 40px 19px;
+        border-radius: 100px;
+        width: 167px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #335566;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btnConvert:hover{
+        box-shadow: 5px 5px 12px #98ADCD;
+    }
+    .btnHistory:hover{
+        box-shadow: 5px 5px 12px #98ADCD;
+        color: #214456;
+    }
+}
+
+.btnHistory{
+    width: 147px;
+    height: 60px;
+    box-shadow: 3px 3px 7px #C2CBD9;
+    background-color: #fff;
+    color: #335566;
+    padding: 40px 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calculatorWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 64px;
+}
+
+
+@media (max-width: 1300px){
     .calculatorWrapper{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 60px;
-        padding: 0 64px;
+        display: block;
+        padding: 30px;
+    }
+    .selectWrapper{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 700px){
+    .btnWrapper{
+        margin-top: 10px;
+    }
+    .convertorWrapper{
+        margin: 15px;
     }
     .btnWrapper{
-        justify-content: end;
-        margin-top: 40px;
-        display: flex;
-        gap: 24px;
-        padding: 0 64px;
-        padding-bottom: 97px;
-
-
+        display: grid;
+        justify-content: center;
+        padding: 30px;
         .btnConvert{
-            box-shadow: 3px 3px 7px #C2CBD9;
-            padding: 40px 19px;
-            border-radius: 100px;
-            width: 167px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #335566;
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
+            width: 100%;
         }
-        .btnConvert:hover{
-            box-shadow: 5px 5px 12px #98ADCD;
-        }
-
         .btnHistory{
-            width: 147px;
-            height: 60px;
-            box-shadow: 3px 3px 7px #C2CBD9;
-            background-color: #fff;
-            color: #335566;
-            padding: 40px 19px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 100px;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .btnHistory:hover{
-            box-shadow: 5px 5px 12px #98ADCD;
-            color: #214456;
+            width: 100%;
         }
     }
 }

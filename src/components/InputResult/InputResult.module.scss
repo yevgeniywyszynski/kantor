@@ -53,3 +53,12 @@
     font-family: "Open Sans", sans-serif;
     opacity: 0.6;
 }
+
+@media (max-width: 600px){
+    .selectWrapper{
+        display: block;
+    }
+    .optionMoneyWrapper{
+        margin-bottom: 20px;
+    }
+}

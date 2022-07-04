@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Steps.module.scss';
+import styles from '../Steps/Steps.module.scss';
 import TransactionHistory from '../TransactionHistory/TransactionHistoryContainer';
 import SelectMoney from '../SelectMoney/SelectMoneyContainer';
 import InputResult from '../InputResult/InputResultContainer';

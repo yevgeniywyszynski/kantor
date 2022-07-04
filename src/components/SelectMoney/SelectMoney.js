@@ -14,11 +14,11 @@ const SelectMoney = ({changeFrom, changeTo, changeResult}) => {
                 }
                 )}
             >
-                <option value="EUR">EUR</option>
-                <option value="USD">USD</option>
-                <option value="GBP">GBR</option>
-                <option value="CHF">CHF</option>
-                <option value="PLN">PLN</option>
+                <option value="EUR">Euro EUR</option>
+                <option value="USD">Dollar USD</option>
+                <option value="GBP">Funt brytyjski GBR</option>
+                <option value="CHF">Frank szwajcarski CHF</option>
+                <option value="PLN">Złoty PLN</option>
             </select>
         </div>
         <div className={styles.arrowMoney}>
@@ -33,11 +33,11 @@ const SelectMoney = ({changeFrom, changeTo, changeResult}) => {
                 }
             )}
             >
-                <option value="CHF">CHF</option>
-                <option value="GBP">GBR</option>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="PLN">PLN</option>
+                <option value="CHF">Frank szwajcarski CHF</option>
+                <option value="GBP">Funt brytyjski GBR</option>
+                <option value="USD">Dollar USD</option>
+                <option value="EUR">Euro EUR</option>
+                <option value="PLN">Złoty PLN</option>
             </select>
         </div>
     </div>
