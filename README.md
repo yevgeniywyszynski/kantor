@@ -1,4 +1,6 @@
-Konwereter walut - który umożliwia konwertowanie wartości pomiędzy walutami (przy wykorzystamiu API https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert).
+https://kantorapi.herokuapp.com/
+
+Konwereter walut - który umożliwia konwertowanie wartości pomiędzy walutami (przy wykorzystamiu API https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert.
 
 Wygorzystane technologie:
     • JavaScript
