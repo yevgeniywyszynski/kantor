@@ -30,3 +30,4 @@ Aplikacja składa się z dwóch podstron:
     • waluta źródłowa, ilość
     • waluta docelowa, wartość po konwersji
     • data konwersji
+<img src="https://ywyszynski.com/img/projects/project-3.png" />
